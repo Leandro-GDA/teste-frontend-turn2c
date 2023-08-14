@@ -1,0 +1,27 @@
+<header>
+  <nav>
+    <a class="profile" >
+      <fa-icon class="icon" [icon]="faHouse"></fa-icon>
+      <p class="text">Perfil</p>
+    </a>
+  </nav>
+</header>
+<main>
+  <div class="upload-area">
+    <p class="text">Adicionar um cachorro</p>
+    <label class="frame" for="upload">
+      <fa-icon class="upload-icon" [icon]="faCamera">
+        <p>Clique para selecionar uma imagem</p>
+      </fa-icon>
+    </label>
+    <input (change)="onChangeFile($event)" type="file" id="upload" name="upload">
+    <button (click)="onUpload()" class="btn-envia">Enviar Foto</button>
+  </div>
+  <div class="dog-area">
+  <p class="my-text">Minhas imagens</p>
+  <div class="my-grid">
+    <app-my-card></app-my-card>
+  </div>
+</div>
+</main>
+ 

@@ -1,0 +1,26 @@
+
+<header>
+  <nav>
+    <div class="dropdown">
+      <label for="breed">Raça:</label>
+      <select (change)="breedFilter($event)" name="breed" id="breed">
+      <option value="0">Todas</option>
+      <option *ngFor="let breed of breeds" [value]="breed.id">{{breed.name}}</option>
+    </select>
+    </div>
+
+    <a class="profile"   [routerLink]="'/profile'" routerLink="active">
+      <fa-icon class="icon" [icon]="faUser"></fa-icon>
+      <p class="text">Perfil</p>
+    </a>
+  </nav>
+</header>
+
+<main>
+  <div class="dog-grid">
+    <app-dog-card *ngFor="let dog of dogs" [dog]="dog"></app-dog-card>
+  </div>
+  <app-pagination (pageChange)="handlePagination($event)"></app-pagination>
+  
+</main>
+

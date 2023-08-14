@@ -1,0 +1,37 @@
+
+.pagination-wraper{
+
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+
+.page{
+  font-size: 14;
+}
+
+.pagination{
+  display: flex;
+  align-items: center;
+  margin: 16px;
+  background-color: #ffffff;
+  height: 40px;
+  border-radius: 10px ;
+
+    .divisor{
+      height: 80%;
+      background-color: #eee;
+      width: 1px;
+      border-radius: 1px;
+    }
+
+    .btn-page{
+      font-size: 16px;
+      border: 0;
+      background: none;
+      width: 81px;
+      height: 100%;
+    }
+  
+  }
+}
